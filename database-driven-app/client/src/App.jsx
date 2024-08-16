@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Team from "./pages/Team";
-// import Contact from "./pages/Contact";
-// import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Team from "./pages/Team";
+import Contact from "./pages/Contact";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 export default function App() {
   const [books, setBooks] = useState([]);
@@ -61,7 +61,7 @@ export default function App() {
   return (
     // This content will show on every page
     <div>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <header>
           <h1>“Today a reader, tomorrow a leader.”</h1>
           <h3>-Margaret Fuller</h3>
@@ -83,7 +83,7 @@ export default function App() {
         </main>
 
         <footer>Copyright VST & Co. 2024</footer>
-      </BrowserRouter> */}
+      </BrowserRouter>
 
       <h2>Add a new Book</h2>
       <form onSubmit={handleSubmit}>

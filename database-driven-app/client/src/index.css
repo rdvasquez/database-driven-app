@@ -16,6 +16,9 @@ header {
 nav {
   display: flex;
   gap: 2rem;
+  padding: 5px 10px 0px 40px;
+  flex: var(--sidebar--flex);
+  text-decoration: none;
 }
 
 h1 {
@@ -37,13 +40,13 @@ h3 {
 
 input {
   width: 35%;
-  padding: 10px 10px;
-  margin: 10px;
+  padding: 15px 10px;
+  margin-top: 50px;
+  margin: 20px;
   font-size: 15px;
   box-sizing: border-box;
   border: 3px #033e8c;
   border-radius: 3px;
-  border-bottom: 2px solid #ff00008a;
   background-image: url(../src/images/booksBG-5.png);
 }
 
@@ -54,13 +57,11 @@ button {
   box-sizing: border-box;
   border: 2px #033e8c;
   border-radius: 3px;
-  border-bottom: 2px solid #ff00008a;
-  cursor: pointer;
-  background-image: url(../src/images/booksbg-2.png);
+  background-image: url(../src/images/booksBG-5.png);
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 footer {
@@ -69,4 +70,10 @@ footer {
   align-items: center;
   padding: 20px;
   min-width: 55px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }
