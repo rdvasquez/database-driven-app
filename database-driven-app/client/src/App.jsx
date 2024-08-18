@@ -3,9 +3,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 export default function App() {
+  // form fields and logic here
   const [books, setBooks] = useState([]);
   const [form, setForm] = useState({
     name: "",
@@ -62,17 +64,38 @@ export default function App() {
     // This content will show on every page
     <div>
       <BrowserRouter>
-        <header>
+        <header className="header">
+          <img
+            id="logo"
+            src="../src/images/logo.png"
+            alt="Company Logo"
+            className="logo"
+          />
+
+          <nav>
+            <Link style={{ textDecoration: "none", color: "white" }} to="/">
+              Home
+            </Link>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/about"
+            >
+              About
+            </Link>
+            <Link style={{ textDecoration: "none", color: "white" }} to="/team">
+              Team
+            </Link>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/contact"
+            >
+              Contact
+            </Link>
+          </nav>
+
           <h1>“Today a reader, tomorrow a leader.”</h1>
           <h3>-Margaret Fuller</h3>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/team">Team</Link>
-            <Link to="/contact">Contact</Link>
-          </nav>
         </header>
-
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -81,11 +104,11 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-
-        <footer>Copyright VST & Co. 2024</footer>
+        <Footer />
       </BrowserRouter>
 
       <h2>Add a new Book</h2>
+
       <form onSubmit={handleSubmit}>
         <input
           name="name"
